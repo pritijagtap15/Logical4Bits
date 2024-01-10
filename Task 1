@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Own Website</title>
+    <style>
+        body {
+            font-size:large;
+            background-color: white;
+        }
+        img{
+           
+            width:300px;
+            height:200px;
+        }
+        .top{
+            text-align:center;
+            background-color:beige;
+            color:darkblue;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .project {
+            border: 1px solid #ddd;
+            padding: 1em;
+            margin-bottom: 1em;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        footer{
+            text-align:center;
+            background-color:burlywood;
+            color:black;
+            padding: 20px;
+        }
+
+    </style>
+</head>
+<body>
+  
+    <div class="top">
+        <img src="priti.jpeg" alt="">
+        <h1>Priti Jagtap</h1>
+        <p>Web Developer</p>
+    </div>
+    <div class="html">
+        <h1>About Me</h1>
+        
+    <p>Highly motivated in basic java with a passion  for continous learning. Developing my problem solving skills through competitive programming on codechef and hacker-Rank. seeking guidance and opportunities in Advance java and DSA skills and development experience to contribute to challenging projects.</p>
+    <section>
+    <h1>Education</h1>
+    <ul>
+        <li>SPPU University BE in comp Engg</li>
+        <li>MSBTE Deploma complete in comp Engg</li>
+    </ul>
+</section>
+    <section>
+    <h1>Skills</h1>
+    <ul>
+        <li>Team Working</li>
+        <li>Basic C/C++</li>
+        <li>Java Intermidiate</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JS</li>
+    </ul>
+</section>
+<section class="container">
+    <h2>Projects</h2>
+    <div class="project">
+        <h3>Alumni Web Page :</h3>
+        <p>This project Trinity Academy of engineering alumni students linked in or instagram account is available. We directly provide a Link of linked in account or instagram account or else facebook account.</p>
+    </div>
+
+    <div class="project">
+        <h3>House Rental Management System:</h3>
+        <p>House Rental Management System project is create using PHP language. In this project Admin can manage the whole building database and user can register, select homes, and purchase the flat ,user can contact with us, also payment page is also available.</p>
+    </div>
+</section>
+    
+</div>
+<footer>
+    <h1>Contact Us</h1>
+    <p>7276894641</p>
+    <p>jagtapriti1512@gmail.com</p>
+    <p>Trinity Academy of Engineering</p>
+
+</footer>
+    
+
+    
+   
+
+</body>
+</html>
