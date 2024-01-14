@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <style>
+        body {
+            background-image: url("https://w.forfun.com/fetch/54/545a194f87e16829c052c12a3ffc4f3a.jpeg");
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #todo-container {
+            width: 300px;
+            background-color: #ccc;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        #todo-list {
+            background-color: wheat;
+            list-style: none;
+            padding: 0;
+        }
+
+        .todo-item {
+            display: flex;
+            background-color: wheat;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            padding: 8px 0;
+        }
+
+        .todo-item input {
+            margin-right: 10px;
+        }
+
+        #new-task {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="todo-container">
+        <h2>To-Do List</h2>
+        <ul id="todo-list"></ul>
+        <input type="text" id="new-task" placeholder="New task">
+        <button onclick="addTask()">Add Task</button>
+    </div>
+
+    <script>
+        function addTask() {
+            var taskInput = document.getElementById('new-task');
+            var taskText = taskInput.value.trim();
+
+            if (taskText === '') {
+                alert('Please enter a valid task.');
+                return;
+            }
+
+            var todoList = document.getElementById('todo-list');
+            var newTask = document.createElement('li');
+            newTask.className = 'todo-item';
+            newTask.innerHTML = `
+                <input type="checkbox" onclick="toggleTask(this)">
+                <span>${taskText}</span>
+                <button onclick="removeTask(this)">Remove</button>
+            `;
+
+            todoList.appendChild(newTask);
+            taskInput.value = '';
+        }
+
+        function toggleTask(checkbox) {
+            var taskText = checkbox.nextElementSibling;
+            if (checkbox.checked) {
+                taskText.style.textDecoration = 'line-through';
+            } else {
+                taskText.style.textDecoration = 'none';
+            }
+        }
+
+        function removeTask(button) {
+            var listItem = button.parentElement;
+            listItem.remove();
+        }
+    </script>
+</body>
+</html>
